@@ -70,11 +70,7 @@ Demonstrates the agent’s learning progress and long-term performance.
 
 ### 📉 Loss Curve  
 Indicates the convergence behavior of Q-values during training.
-
-> _(Insert plots here if available — reward_curve.png, loss_curve.png)_
-
----
-
+https://github.com/TarunBezawada11/breakout-dqn-agent/blob/main/rewards_curve.png
 ## 💻 Compute & Infrastructure
 
 - **GPU**: NVIDIA A100 (80GB HBM2e)
