@@ -1,17 +1,17 @@
 # 🎮 Deep Q-Network (DQN) for Atari Breakout  
 **CS6482 – Deep Reinforcement Learning Project**
 
-Train an AI agent to master Atari Breakout using advanced reinforcement learning techniques like **Dueling DQN** and **Prioritized Experience Replay (PER)**.
+Train an AI agent to master Atari Breakout using modern reinforcement learning techniques like **Dueling DQN** and **Prioritized Experience Replay (PER)**. This project was developed as part of the coursework for CS6482 – Deep Reinforcement Learning.
 
 ---
 
 ## 🚀 Project Highlights
 
-- 📈 Achieved **average reward of 21.67** by version **v10**
+- 📈 Achieved an average reward of **21.67** by version **v10**
 - 🧠 Implemented **Vanilla DQN**, **Dueling DQN**, and **PER**
-- 🖼️ Preprocessed game frames using **OpenCV** and **scikit-image**
-- 🧪 Trained the agent over **5,000 episodes** using Q-learning with a CNN-based policy network
-- ⚙️ Training performed on **NVIDIA A100 GPU** for high-throughput learning
+- 🖼️ Preprocessed input frames using **OpenCV** and **scikit-image**
+- 🧪 Trained over **5,000 episodes** with a CNN-based policy network
+- ⚙️ Trained on **NVIDIA A100 GPU** for high-throughput learning
 
 ---
 
@@ -19,35 +19,24 @@ Train an AI agent to master Atari Breakout using advanced reinforcement learning
 
 | Tool/Library     | Purpose                                       |
 |------------------|-----------------------------------------------|
-| **PyTorch**       | Deep Q-Network and CNN implementation         |
-| **OpenAI Gym**    | Atari Breakout environment (ALE/Breakout-v5) |
-| **ALE-Py**        | Support for Atari Learning Environment        |
-| **OpenCV**        | Frame preprocessing (grayscale, resize)      |
-| **Scikit-Image**  | Advanced image transformations                |
+| **PyTorch**       | DQN and CNN model implementation              |
+| **OpenAI Gym**    | Atari Breakout environment (`ALE/Breakout-v5`)|
+| **ALE-Py**        | Atari Learning Environment interface          |
+| **OpenCV**        | Frame preprocessing (grayscale, resize)       |
+| **Scikit-Image**  | Image transformations                         |
 | **NumPy**         | Numerical computations                        |
-| **Matplotlib**    | Reward/loss visualization                     |
+| **Matplotlib**    | Visualization of training progress            |
 
 ---
 
 ## 🧠 Skills Demonstrated
 
-- **Reinforcement Learning**  
-  Q-learning with Bellman updates, ε-greedy exploration, and experience replay
-
-- **Deep Learning**  
-  Designed a 5-layer CNN to process 84×84×4 grayscale stacked frames
-
-- **Optimization**  
-  Used Prioritized Experience Replay (PER) and fine-tuned learning rate (0.0002)
-
-- **Data Engineering**  
-  Frame preprocessing, stacking, and efficient buffer management
-
-- **Evaluation**  
-  Plotted reward curves and Q-loss to track learning progression
-
-- **Software Engineering**  
-  Modular, version-controlled codebase (tracked from v1 → v10)
+- **Reinforcement Learning**: Q-learning, Bellman updates, ε-greedy policy, experience replay  
+- **Deep Learning**: Built a 5-layer CNN to process 84×84×4 stacked grayscale frames  
+- **Optimization**: Used PER to prioritize valuable experiences and tuned learning rate (0.0002)  
+- **Data Engineering**: Frame preprocessing, replay buffer handling, and stacking observations  
+- **Evaluation**: Reward curve analysis and Q-value loss tracking  
+- **Software Engineering**: Modular and version-controlled codebase (tracked from v1 to v10)  
 
 ---
 
@@ -66,17 +55,23 @@ Train an AI agent to master Atari Breakout using advanced reinforcement learning
 ## 📉 Visual Insights
 
 ### 📈 Reward Curve  
-Demonstrates the agent’s learning progress and long-term performance.
+Demonstrates the agent’s learning progression over training episodes:
+
+![Reward Curve](https://github.com/TarunBezawada11/breakout-dqn-agent/blob/main/rewards_curve.png)
 
 ### 📉 Loss Curve  
-Indicates the convergence behavior of Q-values during training.
-https://github.com/TarunBezawada11/breakout-dqn-agent/blob/main/rewards_curve.png
+Shows convergence of Q-values during training:
+
+![Loss Curve](https://github.com/TarunBezawada11/breakout-dqn-agent/blob/main/loss_curve.png)
+
+---
+
 ## 💻 Compute & Infrastructure
 
 - **GPU**: NVIDIA A100 (80GB HBM2e)
 - **Replay Buffer**: ~1M transitions
-- **Input**: 84×84×4 frame stacks
-- **Model**: CNN with millions of parameters, using target network updates
+- **Input Shape**: 84×84×4 (stacked grayscale frames)
+- **Model**: Convolutional neural network (with target network updates)
 
 ---
 
@@ -84,9 +79,10 @@ https://github.com/TarunBezawada11/breakout-dqn-agent/blob/main/rewards_curve.pn
 
 ```bash
 # Clone the repository
-git clone https://github.com/BlachThunder6302/CS6482-DQN-Breakout.git
+git clone https://github.com/TarunBezawada11/breakout-dqn-agent.git
+cd breakout-dqn-agent
 
-# Install dependencies
+# Install required dependencies
 pip install -r requirements.txt
 
 # Launch the notebook
