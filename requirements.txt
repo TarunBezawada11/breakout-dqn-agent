@@ -1,0 +1,8 @@
+torch
+numpy
+matplotlib
+opencv-python
+torchsummary
+scikit-image
+gymnasium[atari,accept-rom-license]
+ale-py
